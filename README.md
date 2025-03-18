@@ -1,5 +1,51 @@
-# DOS Wasm X
-This is a browser based DOS emulator designed around ease of use and stability. It is based on the newer DosBox-X codebase and thus supports both Windows 95 and Windows 98 installations. However if you just want to use DOS applications and games you can stay in DOS mode. To begin using it simply drag and drop any application or game files onto the emulator. You can then save your hard disk with the click of a button or just exit if you want to discard your changes. I went with a simple and clean interface to try and make it approachable and non-intimidating. The hard disk saves directly in your browser so you can come back later and continue where you left off. It's like your own personal virtual machine on the web!
+# Windows 98 gaming
+
+this is a wrapper app around [DosWasmX](https://github.com/nbarkhina/DosWasmX) (which in turn uses dosbox-x).
+
+## playing Windows 98 games in your browser
+- just click and run, NO virtual machines or emulators required. Never needing exhaustive installation and setup
+- supports Windows 98 / 95 games, and DOS games without hassle
+- Everything runs securely inside your browser (sandboxed), enabling it to run cross-OS, on 64bit Windows, and Linux
+
+### comparing with other means to run Windows 9x games
+
+| platform | GPU emulation | directx support | titles run well | titles can not run | note |
+| --- | --- | --- | --- | --- | --- |
+| doswasmx | S3 trio 64 | directx 6 | RedAlert (dx3), StarCraft1 (dx5), Age Of Empires (dx6) | Need For Speed 2, Delta Force | good for non-FPS gaming. no setup needed |
+| |
+| vmware / virtualbox | softGPU |directx 8 (up to directx 9) | Civilization3, Janes' IAF | Delta Force freezes | fast for most games. a little complex to setup |
+| |
+| 86box | various models, e.g.: voodoo 2000 | directx 6 / 7, depending on driver availability | Delta Force, Need for speed 2 in low graphics settings (640x480, 256 colors) | Civilization3, Jane's IAF | need drivers for chipsets, graphics, etc., which is sometimes hard to find |
+
+### how to use the release
+1. download the zip that matches your OS. for example, "AMD64-Linux" is for linux, where "AMD64-WIN" is for Windows
+2. unzip the file to your specified folder
+3. run the executable
+   - Windows, just double click the .exe ( you need to grant the permission to run for the first time, if prompted by Windows 10 / 11 system )
+   - Linux, chmod a+x on the extracted file, then run it in shell
+4. your default browser will popup, click the "Start Windows" button to begin
+5. for more usage instructions, see [here](https://github.com/nbarkhina/DosWasmX) or the [online manual](https://nbarkhina.github.io/DosWasmX/) 
+
+### game installation, saving game play progress
+- install the games you want to play
+    - IMPORTANT: please remember to "save your harddrive" and "export harddrive", which includes changes you made (please refer to the above manual)
+    - next time to run your installed games, use your exported hard disk image
+- you can always install a new OS, or use your own disk image
+    - you can find a copy of OS at [WinWorld](https://winworldpc.com/product/windows-98/98-second-edition)
+    - find more Windows 9x games on [WinWorld](https://winworldpc.com/library/games) and on [archive.org](https://archive.org/details/software)
+
+### about release files
+- the pre-installed OS (Win 3.1 or 98) are just for convenience
+
+| file | runs on | OS pre-installed |
+| --- | --- | --- |
+| win31runner-AMD64-Linux.zip | Linux on AMD64 | Windows 3.1 |
+| win31runner-AMD64-WIN.zip | Windows 7(64bit)/10/11 on AMD64 | Windows 3.1 |
+| win98runner-AMD64-WIN.zip | Windows 7(64bit)/10/11 on AMD64 | Windows 98 |
+
+---
+
+### below intro copied directly from the original repo
 
 Supports the following features -
 - Fully web based application - using web assembly
@@ -27,76 +73,6 @@ Supports the following features -
 - Send CTRL/ALT/DELETE
 - Pause/Unpause
 - Import existing IMG hard disk if you already have one
-
-You can try it here: https://www.neilb.net/doswasmx/
-
-
-# Hosting
-You can host the app on your own web server. Copy everything in the `dist\` folder to your web server.
-
-Also you can optionally configure a Default Hard Drive to load when users navigate to your application. After Saving/Configuring a Hard Drive locally you can export it from the advanced menu.
-
-![exportdrive](screenshots/exportdrive.PNG)
-
-Then update the settings.js file with the path to your img file
-
-```javascript
-
-var DOSWASMSETTINGS = {
-    CLOUDSAVEURL: "",
-    ISOURL: "",
-    DEFAULTIMG: "https://www.yourwebsite.com/hdd.img"
-}
-
-```
-
-# Startup Script
-You can automate a startup script by creating a "DOSWASMX.BAT" file. It needs to live in the root C:\ drive, not in any subfolder. At the root type "EDIT DOSWASMX.BAT" to create the file and put each command on a seperate line. Then save your file and the hard drive. Example -
-
-![doswasmx.bat](docs/doswasmxbat.png)
-
-
-# Build Instructions
-You will need a Linux environment to build DOS Wasm X
-
-- create a folder outside of this repo to install emscripten
-- git clone https://github.com/emscripten-core/emsdk.git
-- cd emsdk
-- ./emsdk install 3.1.49
-- ./emsdk activate 3.1.49
-- source ./emsdk_env.sh
-- replace Binaryen with special version
-  - replace the file wasm-opt in `emsdk/upstream/bin/wasm-opt` with the one from this repo `code/wasm-opt`
-  - navigate to the `emsdk/upstream/bin/` folder and run `chmod +x wasm-opt`
-  - this is needed because default Binaryen does not support Exceptions and Asyncify together
-  - huge credit goes to @Caiiiycuk for developing this! 
-  - see references below if you prefer to get wasm-opt directly from his releases page
-- navigate back to the code folder in the DosWasmX repo
-- run `make`
-  - you will get a build error towards the end saying EM_CACHE_IS_LOCKED
-  - to get past this error simply copy the faulting emcc command from the terminal and run it manually (See screenshot below)
-  - this should succeed and then run `make` again to finish building
-  - later builds should not get this error after you do this one time fix
-- this process will update the main.js and main.wasm files in your dist folder
-- now serve the dist folder from a webserver and Enjoy!
-
-The emscripten installation above is a one time setup however you will need to always run `source ./emsdk_env.sh` from the emscripten folder every time you close the terminal and before running `make`. This is because the emscripten compiler does not get saved to the PATH
-
-![builderror](screenshots/builderror2.PNG)
-
-# Docker
-
-If you wish to run directly in a container, you can use the following command after installing Docker Desktop:
-
-```bash
-docker run -d -p 80:80 nbarkhina/doswasmx
-```
-
-Once it has started, you can open your browser to [http://localhost](http://localhost).
-
-# Online Documentation
-
-For more extensive guides and technical information please refer to our [Online Documentation](https://nbarkhina.github.io/DosWasmX/)
 
 # Screenshots
 
@@ -137,15 +113,6 @@ For more extensive guides and technical information please refer to our [Online 
 DOS Wasm X supports installing Windows 95 or Windows 98 using your own copy of Windows. Simply drag and drop the ISO onto the startup page. DOS Wasm X will detect the Windows CD and begin the installation process. If you choose to Install Windows 95 you may get the error below. Simply click OK and then cancel when it asks you for the Path to the CD. This will allow you to continue with the installation. The reason for this error is because at this stage of the process the CD drivers have not yet been loaded. However after restarting Windows it will detect the CD Drive and finish installing the drivers successfuly. Always remember to shut down windows in the guest OS before exiting the page. This will automatically save your hard drive changes to the browser and prevent scandisk from running the next time you boot into Windows.
 
 ![screenshot](screenshots/win95error.PNG)
-
-# Common DOS Commands
-- DIR - Display list of files and directories
-- CD - Change the current directory
-- XCOPY - Copy Files
-- DEL - Delete one or more files
-- MKDIR - Create a directory
-
-You can also type HELP at the command line to get a list of commands.
 
 # References
 The Following codebases were used in some part in creating this app
