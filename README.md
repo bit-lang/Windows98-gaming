@@ -13,7 +13,7 @@ this is a wrapper app around [DosWasmX](https://github.com/nbarkhina/DosWasmX) (
 | --- | --- | --- | --- | --- | --- |
 | doswasmx | S3 trio 64 | directx 6 | RedAlert (dx3), StarCraft1 (dx5), Age Of Empires (dx6) | Need For Speed 2, Delta Force | good for non-FPS gaming. no setup needed |
 | |
-| vmware / virtualbox | softGPU |directx 8 (up to directx 9) | Civilization3, Janes' IAF | Delta Force freezes | fast for most games. a little complex to setup |
+| vmware / virtualbox | softGPU |directx 8 (up to directx 9) | Civilization3, Janes' IAF | Delta Force freezes | must install vmvare, and a little complicated to setup softGPU |
 | |
 | 86box | various models, e.g.: voodoo 2000 | directx 6 / 7, depending on driver availability | Delta Force, Need for speed 2 in low graphics settings (640x480, 256 colors) | Civilization3, Jane's IAF | need drivers for chipsets, graphics, etc., which is sometimes hard to find |
 
