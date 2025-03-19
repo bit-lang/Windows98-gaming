@@ -52,17 +52,17 @@ this is a wrapper app around [DosWasmX](https://github.com/nbarkhina/DosWasmX) (
      ![proceed with installation](images/setup-win98-02.png)
    
    - the system auto detects hardwares, installs drivers, and may reboot during the process
-3. the above setup steps are done, you MUST save the completed Windows 98 image to your local disk, to re-use it,
-   you should first shutdown windows
+3. the above setup steps are done, you MUST save the completed Windows 98 image to your local disk to re-use it.
+   - first, you should first shutdown windows, this ensures all data will be saved to browser cache
    
-     ![DO shutdown Windows98](images/shutdown-win98.png),
+     ![DO shutdown Windows98](images/shutdown-win98.png)
    
-   this ensures all data will be saved to browser cache, next, export the hard disk image
+   - next, export the hard disk image
    
      ![export the hard disk image](images/save-win98-harddisk.png)
    
-   - the image (hdd.img) should be downloaded to local DOWNLOADS folder
-   - you can try the image: exit the current session, then drag the image file to start your own Windows
+   - the image (hdd.img) should be downloaded to local \DOWNLOADS folder (chosen by your browser automatically)
+   - you can try the image: exit the current session (click "Exit"), then drag the image file to start your own Windows
 
 for more usage instructions, see [here](https://github.com/nbarkhina/DosWasmX) or the [online manual](https://nbarkhina.github.io/DosWasmX/) 
 - you can always install a new OS, or use your own disk image
