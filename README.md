@@ -20,26 +20,42 @@ this is a wrapper app around [DosWasmX](https://github.com/nbarkhina/DosWasmX) (
 ### see the Windows 3.1 demo
 1. download win31-demo-AMD64.exe from release
 2. double click to run. you may need to grant the permission to run for the first time, if prompted by Windows 10 / 11 system
-   a command prompt window will open, along a browser window
-![screenshot](screenshots/screenshot2.png)
+   a command prompt window will open, alongside a browser window
+   
 ![first-run](images/win31-startup.jpg)
-3. in the browser window, click the "Start Windows" button to begin
+
+4. in the browser window, click the "Start Windows" button to begin
+
    ![windows 3.1 demo](images/Win31-demo.png)
-4. to stop the demo, ![exit windows 3.1](images/exit-win31.png)
-5. now you can type "stop" at the command window prompt, can close the browser
+   
+6. to stop the demo, click "exit" button
+
+   ![exit windows 3.1](images/exit-win31.png)
+   
+8. now you can type "stop" at the command window prompt, and close the browser as well
 
 ### install your own Windows 98 (or Windows 95)
 1. download win9x_blank-disk-AMD64.zip from release, extract the file to a folder you want
 2. double click to run the extracted exe file
-   - DO NOT click on "start Windows", instead,  drag your Windows 98 installation ISO file to the page center frame (as indicated on page)
+   - DO NOT click on "start Windows", instead, drag your Windows 98 installation ISO file to the page center frame (as indicated on page)
    - you will be granted with a command line
+   
      ![to start installation](images/setup-win98.png)
-   - type "d:\setup" the press enter to begin
+     
+   - type "d:\setup" the press enter to begin installation
+   
      ![proceed with installation](images/setup-win98-02.png)
+   
    - the system auto detects hardwares, installs drivers, and may reboot during the process
-3. the above setup steps are done, you MUST save the completed Windows 98 image to your local disk, to re-use it
-     ![DO shutdown Windows98](images/shutdown-win98.png), this ensures all data will be saved to browser cache, next,
+3. the above setup steps are done, you MUST save the completed Windows 98 image to your local disk, to re-use it,
+   you should first shutdown windows
+   
+     ![DO shutdown Windows98](images/shutdown-win98.png),
+   
+   this ensures all data will be saved to browser cache, next, export the hard disk image
+   
      ![export the hard disk image](images/save-win98-harddisk.png)
+   
    - the image (hdd.img) should be downloaded to local DOWNLOADS folder
    - you can try the image: exit the current session, then drag the image file to start your own Windows
 
