@@ -3,9 +3,10 @@
 this is a wrapper app around [DosWasmX](https://github.com/nbarkhina/DosWasmX) (which in turn uses dosbox-x).
 
 ## playing Windows 98 games in your browser
-- just click and run, NO virtual machines or emulators required. Never needing exhaustive installation and setup
-- supports Windows 98 / 95 games, and DOS games without hassle
-- Everything runs securely inside your browser (sandboxed), enabling it to run cross-OS, on 64bit Windows, and Linux
+- just click and run, NO virtual machines or emulators required
+- supports Windows 98 / 95 games, and Windows 3.1 / DOS games
+- release includes a running Windows 3.1 demo
+- Everything runs securely inside your browser (sandboxed), enabling it to run cross-OS, on 64bit Windows, and Linux (release does not include Linux version at present)
 
 ### comparing with other means to run Windows 9x games
 
@@ -17,10 +18,12 @@ this is a wrapper app around [DosWasmX](https://github.com/nbarkhina/DosWasmX) (
 | |
 | 86box | various models, e.g.: voodoo 2000 | directx 6 / 7, depending on driver availability | Delta Force, Need for speed 2 in low graphics settings (640x480, 256 colors) | Civilization3, Jane's IAF | need drivers for chipsets, graphics, etc., which is sometimes hard to find |
 
-### see the Windows 3.1 demo
+---
+
+### run the Windows 3.1 demo
 1. download win31-demo-AMD64.exe from release
-2. double click to run. you may need to grant the permission to run for the first time, if prompted by Windows 10 / 11 system
-   a command prompt window will open, alongside a browser window
+2. double click to run. you may need to grant the permission to run for the first time, if prompted by Windows 10 / 11 system.
+3. a command prompt window will open, alongside a browser window
    
 ![first-run](images/win31-startup.jpg)
 
@@ -28,13 +31,15 @@ this is a wrapper app around [DosWasmX](https://github.com/nbarkhina/DosWasmX) (
 
    ![windows 3.1 demo](images/Win31-demo.png)
    
-6. to stop the demo, click "exit" button
+5. to stop the demo, click "exit" button
 
    ![exit windows 3.1](images/exit-win31.png)
    
-8. now you can type "stop" at the command window prompt, and close the browser as well
+6. now you can type "stop" at the command window prompt, and close the browser as well
 
-### install your own Windows 98 (or Windows 95)
+---
+
+### install and run Windows 98 (or Windows 95)
 1. download win9x_blank-disk-AMD64.zip from release, extract the file to a folder you want
 2. double click to run the extracted exe file
    - DO NOT click on "start Windows", instead, drag your Windows 98 installation ISO file to the page center frame (as indicated on page)
@@ -42,7 +47,7 @@ this is a wrapper app around [DosWasmX](https://github.com/nbarkhina/DosWasmX) (
    
      ![to start installation](images/setup-win98.png)
      
-   - type "d:\setup" the press enter to begin installation
+   - type "d:\setup"  then, press enter to begin installation
    
      ![proceed with installation](images/setup-win98-02.png)
    
@@ -67,33 +72,6 @@ for more usage instructions, see [here](https://github.com/nbarkhina/DosWasmX) o
 ---
 
 ### below intro copied directly from the original repo
-
-Supports the following features -
-- Fully web based application - using web assembly
-- Save hard drive to the browser (512mb, 1 gig, or 2 gig options)
-- Automatic support for a variety of file formats (Iso, Zip, Bin, Cue, Img, 7z)
-- Customize RAM (32mb, 64mb, 128mb)
-- Import/export files into and out of the emulator
-- Export your entire hard disk image for local saving
-- Load/change CD while emulator is running
-- Floppy Disk Support
-- Speed up/slow down emulator time
-- Mobile mode
-- On scren keyboard
-- Gamepad support
-- Customize Mouse Sensitivity
-- Dark Mode
-- Audio support
-- Full screen
-- Zoom controls
-- Mouse capture
-- Resize resolution
-- Customize CPU speed
-- Host the application yourself
-- Customize startup hard drive image
-- Send CTRL/ALT/DELETE
-- Pause/Unpause
-- Import existing IMG hard disk if you already have one
 
 # Screenshots
 
