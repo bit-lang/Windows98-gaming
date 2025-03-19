@@ -21,7 +21,8 @@ this is a wrapper app around [DosWasmX](https://github.com/nbarkhina/DosWasmX) (
 1. download win31-demo-AMD64.exe from release
 2. double click to run. you may need to grant the permission to run for the first time, if prompted by Windows 10 / 11 system
    a command prompt window will open, along a browser window
-   ![first-run](images/win31-startup.jpg)
+![screenshot](screenshots/screenshot2.png)
+![first-run](images/win31-startup.jpg)
 3. in the browser window, click the "Start Windows" button to begin
    ![windows 3.1 demo](images/Win31-demo.png)
 4. to stop the demo, ![exit windows 3.1](images/exit-win31.png)
