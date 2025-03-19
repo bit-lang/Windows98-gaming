@@ -17,30 +17,34 @@ this is a wrapper app around [DosWasmX](https://github.com/nbarkhina/DosWasmX) (
 | |
 | 86box | various models, e.g.: voodoo 2000 | directx 6 / 7, depending on driver availability | Delta Force, Need for speed 2 in low graphics settings (640x480, 256 colors) | Civilization3, Jane's IAF | need drivers for chipsets, graphics, etc., which is sometimes hard to find |
 
-### how to use the release
-1. download the zip that matches your OS. for example, "AMD64-Linux" is for linux, where "AMD64-WIN" is for Windows
-2. unzip the file to your specified folder
-3. run the executable
-   - Windows, just double click the .exe ( you need to grant the permission to run for the first time, if prompted by Windows 10 / 11 system )
-   - Linux, chmod a+x on the extracted file, then run it in shell
-4. your default browser will popup, click the "Start Windows" button to begin
-5. for more usage instructions, see [here](https://github.com/nbarkhina/DosWasmX) or the [online manual](https://nbarkhina.github.io/DosWasmX/) 
+### see the Windows 3.1 demo
+1. download win31-demo-AMD64.exe from release
+2. double click to run. you may need to grant the permission to run for the first time, if prompted by Windows 10 / 11 system
+   a command prompt window will open, along a browser window
+   [first-run](images/win31-startup.jpg)
+3. in the browser window, click the "Start Windows" button to begin
+   [windows 3.1 demo](images/Win31-demo.png)
+4. to stop the demo, [exit windows 3.1](images/exit-win31.png)
+5. now you can type "stop" at the command window prompt, can close the browser
 
-### game installation, saving game play progress
-- install the games you want to play
-    - IMPORTANT: please remember to "save your harddrive" and "export harddrive", which includes changes you made (please refer to the above manual)
-    - next time to run your installed games, use your exported hard disk image
+### install your own Windows 98 (or Windows 95)
+1. download win9x_blank-disk-AMD64.zip from release, extract the file to a folder you want
+2. double click to run the extracted exe file
+   - DO NOT click on "start Windows", instead,  drag your Windows 98 installation ISO file to the page center frame (as indicated on page)
+   - you will be granted with a command line, [to start installation](images/setup-win98.png)
+   - type "d:\setup" the press enter to begin
+   - [proceed with installation](images/setup-win98-02.png)
+   - the system auto detects hardwares, installs drivers, and may reboot during the process
+3. the above setup steps are done, you MUST save the completed Windows 98 image to your local disk, to re-use it
+   - [DO shutdown Windows98](images/shutdown-win98.png), this ensures all data will be saved to browser cache, next,
+   - [export the hard disk image](images/save-win98-harddisk.png)
+   - the image (hdd.img) should be downloaded to local DOWNLOADS folder
+   - you can try the image: exit the current session, then drag the image file to start your own Windows
+
+for more usage instructions, see [here](https://github.com/nbarkhina/DosWasmX) or the [online manual](https://nbarkhina.github.io/DosWasmX/) 
 - you can always install a new OS, or use your own disk image
     - you can find a copy of OS at [WinWorld](https://winworldpc.com/product/windows-98/98-second-edition)
     - find more Windows 9x games on [WinWorld](https://winworldpc.com/library/games) and on [archive.org](https://archive.org/details/software)
-
-### about release files
-- the pre-installed Windows 3.1 is just for demo. will remove the embedded OS if requested
-
-| file | runs on | OS pre-installed |
-| --- | --- | --- |
-| win31runner-AMD64-Linux.zip | Linux on AMD64 | Windows 3.1 |
-| win31runner-AMD64-WIN.zip | Windows 7(64bit)/10/11 on AMD64 | Windows 3.1 |
 
 ---
 
