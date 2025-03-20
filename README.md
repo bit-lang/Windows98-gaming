@@ -1,12 +1,10 @@
 # Windows 98 gaming
 
-click to run version of [DosWasmX](https://github.com/nbarkhina/DosWasmX). NO virtual machines or emulators required.
-
-## playing Windows 98 games in your browser
+- click to run version of [DosWasmX](https://github.com/nbarkhina/DosWasmX). NO virtual machines or emulators required
 - supports Windows 98 / 95 games, and Windows 3.1 / DOS games
 - runs on 64bit Windows and Linux
 
-### comparing with other means to run Windows 9x games
+## comparing with other means to run Windows 9x games
 
 | platform | GPU emulation | directx support | titles run well | titles can not run | note |
 | --- | --- | --- | --- | --- | --- |
@@ -18,7 +16,7 @@ click to run version of [DosWasmX](https://github.com/nbarkhina/DosWasmX). NO vi
 
 ---
 
-### run the Windows 3.1 demo
+## run the Windows 3.1 demo
 1. download win31-demo-AMD64.exe from release
 2. double click to run. you may need to grant the permission to run for the first time, if prompted by Windows 10 / 11 system.
 3. a command prompt window will open, alongside a browser window. in the browser window, click the "Start Windows" button to begin
@@ -35,7 +33,7 @@ click to run version of [DosWasmX](https://github.com/nbarkhina/DosWasmX). NO vi
 
 ---
 
-### install and run Windows 98 (or Windows 95)
+## install and run Windows 98 (or Windows 95)
 1. download win9x_blank-disk-AMD64.zip from release, extract the file to a folder you want
    - linux version is win9x_blank-disk-Linux-AMD64.zip
 3. double click to run the extracted exe file. (for the Linux version, you need to unzip, and chmod a+x to run it)
@@ -67,7 +65,7 @@ for more usage instructions, see [here](https://github.com/nbarkhina/DosWasmX) o
 
 ---
 
-### below intro copied directly from the original repo
+## below intro copied directly from the original repo
 
 # Screenshots
 
