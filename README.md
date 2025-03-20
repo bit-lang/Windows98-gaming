@@ -6,13 +6,13 @@
 
 ## comparing with other means to run Windows 9x games
 
-| platform | GPU emulation | directx support | titles run well | titles can not run | note |
+| platform | GPU emulation | directx support | titles run well | pros | cons |
 | --- | --- | --- | --- | --- | --- |
-| doswasmx (this one) | S3 trio 64 | directx 6 | RedAlert (dx3), StarCraft1 (dx5), Age Of Empires (dx6) | Need For Speed 2, Delta Force | good for non-FPS gaming. no setup needed |
+| doswasmx (this one) | S3 trio 64 | directx 6 | RedAlert (dx3), StarCraft1 (dx5), Age Of Empires (dx6) | no setup of virtual machine platform needed. good for non-FPS gaming | some demanding games can not run well. e.g.: Need for Speed 2 |
 | |
-| vmware / virtualbox | softGPU |directx 8 (up to directx 9) | Civilization3, Jane's IAF | Delta Force freezes | must install vmware, and a little complicated to setup softGPU |
+| vmware / virtualbox | softGPU | directx 8 (up to directx 9) | Civilization3, Jane's IAF | good Performance | must install vmware, and a little complicated to setup softGPU. but incompatible with some titles, e.g. Delta Force |
 | |
-| 86box / PCem | various models, e.g.: voodoo 2000 | directx 6 / 7, depending on driver availability | Delta Force, Need for speed 2 in low graphics settings (640x480, 256 colors) | Civilization3, Jane's IAF | need drivers for chipsets, graphics, etc., which is sometimes hard to find |
+| 86box / PCem | 1990's VGA adaptors, e.g.: voodoo 2000 | directx 6 / 7, depending on driver availability | Delta Force, Need for speed 2 in low graphics settings (640x480, 256 colors) | the go-to choice for compatibility | need drivers for chipsets, graphics, etc., which are sometimes hard to find |
 
 ---
 
