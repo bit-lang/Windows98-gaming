@@ -1,65 +1,61 @@
 # Windows 98 gaming
 
-this is a wrapper app around [DosWasmX](https://github.com/nbarkhina/DosWasmX) (which in turn uses dosbox-x).
+click to run version of [DosWasmX](https://github.com/nbarkhina/DosWasmX). NO virtual machines or emulators required.
 
 ## playing Windows 98 games in your browser
-- just click and run, NO virtual machines or emulators required
 - supports Windows 98 / 95 games, and Windows 3.1 / DOS games
-- release includes a running Windows 3.1 demo
-- Everything runs securely inside your browser (sandboxed), enabling it to run cross-OS, on 64bit Windows, and Linux (release does not include Linux version at present)
+- runs on 64bit Windows and Linux
 
 ### comparing with other means to run Windows 9x games
 
 | platform | GPU emulation | directx support | titles run well | titles can not run | note |
 | --- | --- | --- | --- | --- | --- |
-| doswasmx | S3 trio 64 | directx 6 | RedAlert (dx3), StarCraft1 (dx5), Age Of Empires (dx6) | Need For Speed 2, Delta Force | good for non-FPS gaming. no setup needed |
+| doswasmx (this one) | S3 trio 64 | directx 6 | RedAlert (dx3), StarCraft1 (dx5), Age Of Empires (dx6) | Need For Speed 2, Delta Force | good for non-FPS gaming. no setup needed |
 | |
 | vmware / virtualbox | softGPU |directx 8 (up to directx 9) | Civilization3, Jane's IAF | Delta Force freezes | must install vmware, and a little complicated to setup softGPU |
 | |
-| 86box | various models, e.g.: voodoo 2000 | directx 6 / 7, depending on driver availability | Delta Force, Need for speed 2 in low graphics settings (640x480, 256 colors) | Civilization3, Jane's IAF | need drivers for chipsets, graphics, etc., which is sometimes hard to find |
+| 86box / PCem | various models, e.g.: voodoo 2000 | directx 6 / 7, depending on driver availability | Delta Force, Need for speed 2 in low graphics settings (640x480, 256 colors) | Civilization3, Jane's IAF | need drivers for chipsets, graphics, etc., which is sometimes hard to find |
 
 ---
 
 ### run the Windows 3.1 demo
 1. download win31-demo-AMD64.exe from release
 2. double click to run. you may need to grant the permission to run for the first time, if prompted by Windows 10 / 11 system.
-3. a command prompt window will open, alongside a browser window
+3. a command prompt window will open, alongside a browser window. in the browser window, click the "Start Windows" button to begin
    
-![first-run](images/win31-startup.jpg)
-
-4. in the browser window, click the "Start Windows" button to begin
+   ![first-run](images/win31-startup.jpg)
 
    ![windows 3.1 demo](images/Win31-demo.png)
    
-5. to stop the demo, click "exit" button
+4. to stop the demo, shutdown windows, then click "exit" button on the browser page
 
    ![exit windows 3.1](images/exit-win31.png)
    
-6. now you can type "stop" at the command window prompt, and close the browser as well
+5. now you can type "stop" at the command window prompt, and close the browser as well
 
 ---
 
 ### install and run Windows 98 (or Windows 95)
 1. download win9x_blank-disk-AMD64.zip from release, extract the file to a folder you want
-2. double click to run the extracted exe file
+   - linux version is win9x_blank-disk-Linux-AMD64.zip
+3. double click to run the extracted exe file. (for the Linux version, you need to unzip, and chmod a+x to run it)
    - DO NOT click on "start Windows", instead, drag your Windows 98 installation ISO file to the page center frame (as indicated on page)
-   - you will be granted with a command line
+   - you will see a command line. type "d:\setup"  then, press enter to begin installation
    
-     ![to start installation](images/setup-win98.png)
+   ![to start installation](images/setup-win98.png)
      
-   - type "d:\setup"  then, press enter to begin installation
-   
-     ![proceed with installation](images/setup-win98-02.png)
-   
    - the system auto detects hardwares, installs drivers, and may reboot during the process
-3. the above setup steps are done, you MUST save the completed Windows 98 image to your local disk to re-use it.
+   
+   ![proceed with installation](images/setup-win98-02.png)
+   
+4. the above setup steps are done, you MUST save the completed Windows 98 image to your local disk to re-use it.
    - first, you should first shutdown windows, this ensures all data will be saved to browser cache
    
-     ![DO shutdown Windows98](images/shutdown-win98.png)
+   ![DO shutdown Windows98](images/shutdown-win98.png)
    
    - next, export the hard disk image
    
-     ![export the hard disk image](images/save-win98-harddisk.png)
+   ![export the hard disk image](images/save-win98-harddisk.png)
    
    - the image (hdd.img) should be downloaded to local \DOWNLOADS folder (chosen by your browser automatically)
    - you can try the image: exit the current session (click "Exit"), then drag the image file to start your own Windows
