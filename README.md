@@ -1,5 +1,4 @@
 # Windows 98 gaming
-
 - click to run version of [DosWasmX](https://github.com/nbarkhina/DosWasmX). NO virtual machines or emulators required
 - supports Windows 98 / 95 games, and Windows 3.1 / DOS games
 - runs on 64bit Windows and Linux
@@ -8,17 +7,15 @@
 
 | platform | GPU emulation | directx support | titles run well | pros | cons |
 | --- | --- | --- | --- | --- | --- |
-| doswasmx (this one) | S3 trio 64 | directx 6 | RedAlert (dx3), StarCraft1 (dx5), Age Of Empires (dx6) | no setup of virtual machine platform needed. good for non-FPS gaming | some demanding games can not run well. e.g.: Need for Speed 2 |
-| |
+| ***doswasmx*** (<ins>this one</ins>) | S3 trio 64 | directx 6 | RedAlert (dx3), StarCraft1 (dx5), Age Of Empires (dx6) | no setup of virtual machine platform needed. good for non-FPS gaming | some demanding games can not run well. e.g.: Need for Speed 2 |
 | vmware / virtualbox | softGPU | directx 8 (up to directx 9) | Civilization3, Jane's IAF | good Performance | must install vmware, and a little complicated to setup softGPU. but incompatible with some titles, e.g. Delta Force |
-| |
 | 86box / PCem | 1990's VGA adaptors, e.g.: voodoo 2000 | directx 6 / 7, depending on driver availability | Delta Force, Need for speed 2 in low graphics settings (640x480, 256 colors) | the go-to choice for compatibility | need drivers for chipsets, graphics, etc., which are sometimes hard to find |
 
 ---
 
 ## run the Windows 3.1 demo
 1. download win31-demo-AMD64.exe from release
-2. double click to run. you may need to grant the permission to run for the first time, if prompted by Windows 10 / 11 system.
+2. double click to run. you may need to grant the permission to run for the first time, if prompted by Windows 10 / 11 system
 3. a command prompt window will open, alongside a browser window. in the browser window, click the "Start Windows" button to begin
    
    ![first-run](images/win31-startup.jpg)
